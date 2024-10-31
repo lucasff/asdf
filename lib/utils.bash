@@ -829,6 +829,7 @@ with_shim_executable() {
     else
       printf "%s %s\n" "No version is set for command" "$shim_name"
       printf "%s %s\n" "Consider adding one of the following versions in your config file at" "$closest_tool_version"
+      printf "%s %s\n" "Alternatively, you can use asdf global " "$shim_plugin" " <version> to set the default version globally"
     fi
     shim_plugin_versions "${shim_name}"
   ) >&2
